@@ -2,18 +2,19 @@ const firstArray = [3,1,7,9];
 const secondArray = [2,4,1,9,3];
 let sum = 0;
 let i = 0;
+let arr = [];
 
 // the sum of different numbers.
 for (let j=0; j<firstArray.length; j++){
 
-    let j = i+1;
+    let j = 0;
 
         if (firstArray[i] !== secondArray[i+j]){
-            sum = firstArray[i] + secondArray[i+j]
+            arr[i] = firstArray[i] + secondArray[i+j]
         } 
         
     
-   
+   sum += arr[i]
     
 }
 
@@ -23,12 +24,15 @@ return sum;
 let Sum1 = 0;
 for (let j=0; j<firstArray.length; j++){
 
-    let j = i+1;
+    let j = 0;
 
-        if (firstArray[i] == secondArray[i+j]){
-            Sum1= firstArray[i] + secondArray[i+j]
+      
+        if (firstArray[i] !== secondArray[i+j]){
+            arr[i] = firstArray[i] + secondArray[i+j]
         } 
         
+    
+   sum += arr[i]
     
    
     
